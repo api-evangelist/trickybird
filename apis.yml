@@ -13,6 +13,19 @@ tags:
   - unblock
   - no account
   - no install
+  - Browser
+  - agent-native
+  - WebMCP
+  - llms-txt
+  - Privacy
+  - Anonymity
+  - network filtering circumvention
+  - consumer utility
+tags_raw:
+  - web proxy
+  - unblock
+  - no account
+  - no install
   - browser
   - agent-native
   - WebMCP
@@ -30,6 +43,19 @@ apis:
     baseURL: https://trickybird.com
     image: https://trickybird.com/opengraph-image?v=cp-v0.6.3
     tags:
+      - web proxy
+      - unblock
+      - no account
+      - no install
+      - Browser
+      - agent-native
+      - WebMCP
+      - llms-txt
+      - Privacy
+      - Anonymity
+      - network filtering circumvention
+      - consumer utility
+    tags_raw:
       - web proxy
       - unblock
       - no account
