@@ -14,7 +14,7 @@ tags:
   - no account
   - no install
   - Browser
-  - agent-native
+  - Agent-Native
   - WebMCP
   - llms-txt
   - Privacy
@@ -40,7 +40,6 @@ apis:
       Agent-native interfaces for TrickyBird: a structured llms.txt and a documented WebMCP in-page tool surface. No
       REST/OpenAPI/GraphQL/Postman contract and no remote MCP server.
     humanURL: https://trickybird.com/webmcp
-    baseURL: https://trickybird.com
     image: https://trickybird.com/opengraph-image?v=cp-v0.6.3
     tags:
       - web proxy
@@ -48,7 +47,7 @@ apis:
       - no account
       - no install
       - Browser
-      - agent-native
+      - Agent-Native
       - WebMCP
       - llms-txt
       - Privacy
