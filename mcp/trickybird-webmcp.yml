@@ -15,9 +15,10 @@ note: >-
   call document.modelContext.executeTool(). The provider serves no /.well-known/webmcp.json
   manifest (probed 404 2026-09-10); the tool surface is documented in prose at /webmcp. The
   gateway refuses WebMCP on every document it proxies, so a page opened THROUGH TrickyBird can
-  register no tools — only TrickyBird's own first-party pages carry them. The site description
-  says "13 named tools"; the /webmcp reference enumerates 12 distinct tool names (recorded
-  below), registered 17 times across 10 page patterns.
+  register no tools — only TrickyBird's own first-party pages carry them. The /webmcp reference
+  enumerates 12 distinct tool names (recorded below), registered 17 times across 10 page patterns;
+  its ItemList JSON-LD carries numberOfItems 12 (re-checked 2026-10-05). The earlier "13 named
+  tools" came from our own description, not from any TrickyBird page (api-evangelist/trickybird#1).
 deployment:
   mode: none
   transport: in-page (WebMCP / document.modelContext)

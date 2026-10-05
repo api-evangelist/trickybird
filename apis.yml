@@ -1,11 +1,12 @@
 name: TrickyBird
 description: >-
   Free web proxy to open blocked sites in a normal browser tab with no account and no install. Exposes agent-native
-  surfaces only: an llms.txt and an in-page WebMCP tool surface (13 named tools across specific pages).
+  surfaces only: an llms.txt and an in-page WebMCP tool surface (12 named tools across specific pages, as listed in the ItemList JSON-LD at
+  https://trickybird.com/webmcp). It publishes no HTTP API for third parties.
 url: >-
   https://raw.githubusercontent.com/api-evangelist/trickybird/refs/heads/main/apis.yml
 created: '2026-09-09'
-modified: '2026-09-10'
+modified: '2026-10-05'
 specificationVersion: '0.21'
 image: https://trickybird.com/opengraph-image?v=cp-v0.6.3
 tags:
@@ -18,9 +19,7 @@ tags:
   - WebMCP
   - llms-txt
   - Privacy
-  - Anonymity
   - network filtering circumvention
-  - consumer utility
 tags_raw:
   - web proxy
   - unblock
@@ -31,9 +30,7 @@ tags_raw:
   - WebMCP
   - llms.txt
   - privacy
-  - anonymity
   - network filtering circumvention
-  - consumer utility
 apis:
   - name: TrickyBird Agent Surface
     description: >-
@@ -51,9 +48,7 @@ apis:
       - WebMCP
       - llms-txt
       - Privacy
-      - Anonymity
       - network filtering circumvention
-      - consumer utility
     tags_raw:
       - web proxy
       - unblock
@@ -64,9 +59,7 @@ apis:
       - WebMCP
       - llms.txt
       - privacy
-      - anonymity
       - network filtering circumvention
-      - consumer utility
     properties:
       - type: LLMsTxt
         name: llms.txt (served live at https://trickybird.com/llms.txt, saved verbatim 2026-09-10)
@@ -88,10 +81,9 @@ generated:
 common:
 - type: Website
   url: https://trickybird.com
-- type: VulnerabilityDisclosure
-  url: security/trickybird-vulnerability-disclosure.yml
 - type: Security
-  url: security/trickybird-vulnerability-disclosure.yml
+  name: Security contact published (security.txt; no vulnerability disclosure policy)
+  url: security/trickybird-security-contact.yml
 - type: DomainSecurity
   url: security/trickybird-domain-security.yml
 - type: WellKnown
@@ -116,3 +108,28 @@ x-enrichment:
   status: enriched
   artifacts_added: 5
   pass: local-v3
+x-correction-request:
+  requested: '2026-10-05'
+  source:
+  - https://github.com/api-evangelist/trickybird/issues/1
+  request: 'Issue #1 (trickybird-net, owner of trickybird.com), verified live 2026-10-05. (1) https://trickybird.com/webmcp
+    (200) carries an ItemList JSON-LD with numberOfItems 12 and 12 elements (open_site, cancel_launch, open_this_site,
+    list_checked_sites, get_site_status, get_faq, get_security_overview, get_comparison, get_article, get_site_guide,
+    list_articles, get_leak_test); the "13 named tools" in the description was wrong. (2) The tag "consumer utility"
+    matched the Energy & Utilities regime; TrickyBird is a consumer web proxy and apis.io already reads industries
+    [cybersecurity], areas [privacy]. (3) The provider does not describe itself with "Anonymity". (4) https://trickybird.com/.well-known/security.txt
+    (200) carries Contact, Expires, Preferred-Languages and Canonical, and no Policy field. (5) dig TXT _dmarc.trickybird.com
+    returns "v=DMARC1; p=quarantine; np=reject; rua=mailto:dmarc@trickybird.com; fo=1"; the HSTS header is max-age=31536000;
+    includeSubDomains; preload. (6) The apis.io "Source on GitHub" button links our data repository. (7) TrickyBird
+    publishes no HTTP API for third parties; the one catalog entry is its agent surface (llms.txt + in-page WebMCP).
+    (8) https://apis.io/api/v1/apis/trickybird-agent-surface returns 404; /api/v1/apis/trickybird:trickybird-agent-surface
+    returns 200. An invented path on trickybird.com returns a real 404.'
+  applied: '2026-10-05'
+  applied_note: 'Applied (1) description now says 12 tools; (2) dropped the "consumer utility" tag that matched the
+    Energy & Utilities regime; (3) dropped the "Anonymity" tag; (4) the security record is renamed security/trickybird-security-contact.yml
+    and says security contact only, no policy, and the VulnerabilityDisclosure pointer is removed; (5) security/trickybird-domain-security.yml
+    now records DMARC p=quarantine, np=reject and HSTS includeSubDomains + preload. Not applied in this repository:
+    (6) the "Source on GitHub" button, (7) the "publishes 1 API" count and (8) the curl example are apis.io page
+    templates, not profile data; they are raised with the apis.io build. The agent surface entry is kept because
+    it is what the llms.txt and WebMCP pages describe; the zero scores for OpenAPI, portal and remote MCP are unchanged
+    at the provider''s request.'

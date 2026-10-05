@@ -1,9 +1,14 @@
-generated: '2026-09-10'
-method: searched
+generated: '2026-10-05'
+method: probed
 probe: true
 source: https://trickybird.com/.well-known/security.txt
+kind: security-contact
 contact:
 - mailto:security@trickybird.com
+policy: none
+note: TrickyBird publishes a security contact in an RFC 9116 security.txt (Contact, Expires, Preferred-Languages,
+  Canonical). It publishes no vulnerability disclosure policy; security.txt has no Policy field. Re-probed 2026-10-05
+  at the provider's request (api-evangelist/trickybird#1).
 evidence:
 - source: https://trickybird.com/.well-known/security.txt
-  kind: security.txt (live probe)
+  kind: security.txt (live probe, 2026-10-05)
