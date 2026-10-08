@@ -30,3 +30,16 @@ evidence:
   status: 200
 - url: https://trickybird.com/pricing
   status: 404
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  units: []
+  plans:
+  - name: Free
+    access: other
+    model: metered
+    model_how: derived
+    units: []
+    periods: []
