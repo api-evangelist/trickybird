@@ -64,9 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Free web proxy to open blocked sites in a normal browser tab with no account and no install. Exposes agent-native surfaces only: an llms.txt and an in-page WebMCP tool surface documented at https://trickybird.com/webmcp — there is no REST/OpenAPI/GraphQL contract, no remote MCP server, and no accounts or auth.
+Free web proxy to open blocked sites in a normal browser tab with no account and no install. Exposes agent-native surfaces only: an llms.txt and an in-page WebMCP tool surface (12 named tools across specific pages, as listed in the ItemList JSON-LD at https://trickybird.com/webmcp). It publishes no HTTP API for third parties.
 
-- **Website:** https://trickybird.com
-- **llms.txt:** https://trickybird.com/llms.txt (saved verbatim in `llms/`)
-- **WebMCP docs:** https://trickybird.com/webmcp (12 in-page tools, profiled in `mcp/trickybird-webmcp.yml`)
-- **security.txt:** https://trickybird.com/.well-known/security.txt (saved in `well-known/`)
+**Areas:** web proxy · unblock · no account · no install · Browser · Agent-Native · WebMCP · llms-txt · Privacy · network filtering circumvention
+
+## TrickyBird on APIs.io
+
+Everything profiled for TrickyBird is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/trickybird/](https://apis.io/providers/trickybird/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [TrickyBird Agent Surface](https://apis.io/apis/trickybird/trickybird-agent-surface/) — Agent-native interfaces for TrickyBird: a structured llms.txt and a documented WebMCP in-page tool surface. No REST/OpenAPI/GraphQL/Postman contract and no…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Trickybird Domain Security](https://apis.io/security/trickybird/trickybird-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Trickybird Plans Pricing](https://apis.io/plans/trickybird/trickybird-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Trickybird Rate Limits](https://apis.io/rate-limits/trickybird/trickybird-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://trickybird.com)
+- [Pricing](https://trickybird.com/faq)
+- [Support](https://trickybird.com/support)
+- [Terms of service](https://trickybird.com/terms)
+- [Privacy policy](https://trickybird.com/privacy)
+
+## API Evangelist rating
+
+**Kin Score 23.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 31.6 |
+| Developer ergonomics | 14.3 |
+| Access clarity | 52.6 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/trickybird/](https://apis.io/providers/trickybird/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for TrickyBird: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/trickybird/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
